@@ -1,0 +1,131 @@
+.topnav{
+    display: flex;
+    justify-content: space-between;
+}
+#logo img{
+    width: 80px;
+    height: 40px;
+    object-fit: scale-down;
+}
+.topnav img{
+    width: 40px;
+    height: 40px;
+    object-fit: scale-down;
+}
+
+.admin-picture{
+    background-color: rgba(0, 0, 0, 0.5);
+    height: max-content;
+    width: max-content;
+}
+.admin-picture img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    float: inline-start;
+    padding: 10px;
+}
+.admin-picture p{
+    padding-left: 70px;
+    color: white;
+}
+.admin-picture h3{
+    padding-left: 70px;
+    color: white;
+}
+.edit{
+    float: inline-end;
+    width: 5px;
+    width:5px;
+    object-fit: scale-down;
+}
+body{
+    background-image: url(images/background.jpg);
+}
+#quiz-card input {
+    text-decoration: none;
+    border: none;
+    min-width: 100px;
+
+}
+#quiz-card h3,input,p{
+    padding-left: 55px;
+    padding-right: 5px;
+    color: black;
+}
+#quiz-card{
+    border-left: 5px solid white;
+    width: max-content;
+    background-color: white;
+    box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
+}
+
+#quiz-card img{
+    padding-top: 5px;
+    float:inline-start;
+    width: 50px;
+    width: 50px;
+    object-fit: scale-down;
+}
+body button{
+    float:right;
+}
+button img{
+    width: 20px;
+    width: 20px;
+    object-fit: scale-down;
+}
+.editquiz{
+    border-left: 5px solid white;
+    width: max-content;
+    background-color: white;
+    box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
+}
+.editquiz img{
+    width: 85px;
+    height: 85px;
+    object-fit: scale-down;
+    float:inline-start;
+    padding-top: 15px;
+    padding-left: 5px;
+}
+.editquiz h3,p{
+    padding-left: 100px;
+}
+#edit-button{
+    float:inline-end;
+    height:30px;
+    width:30px;
+    padding-right: 5px;
+}
+
+.search-bar {
+    width: 300px;            
+    padding: 10px 15px;      
+    font-size: 16px;         
+    border: 1px solid #ccc;  
+    border-radius: 20px;     
+    outline: none;           
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .search-bar:focus {
+    border-color: #007bff;   
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+  }
+  
+  .text-box {
+    width: 100%; 
+    max-width: 400px; 
+    padding-left: 100px;
+    font-size: 16px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+}
+
+.text-box:focus {
+    outline: none;
+    border-color: #007bff; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}

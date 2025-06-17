@@ -1,0 +1,350 @@
+*{
+    box-sizing: border-box;
+}
+.navbar{
+    display: flex;
+    background-color: #929572;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed; /* scroll down also stick at top */
+    width: 100%;
+    height:60px;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 20px 0px 20px 0px;
+}
+                
+.navbar .logo{
+    width: 120px;
+    max-width: 150px;
+    height: auto;
+}
+
+.searchContent{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 60%;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: center;
+}
+
+.searchContent form{
+    display: flex;
+    flex-grow: 1;
+}
+
+/* Dropdown */
+.navbar .dropdown{
+    position: relative;
+    display: flex;
+    background-color: #b9c19a93;
+    border-radius: 25px 0px 0px 25px;
+    width:max-content;
+    padding-right: 10px;
+    padding-left: 10px;
+    max-width: 160px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.navbar .dropdown svg{
+    padding-left: 5px;
+}
+
+
+.navbar .dropContent{
+    display: none;
+    overflow: auto;
+    z-index: 2;
+    background-color: #b9c19a;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    max-height: 200px;
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #929572;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track{
+    border-radius: 10px;
+}
+
+.dropContent a {
+    color:black;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+
+/* hover effect */
+.dropdown:hover .dropContent, .profileDropdown:hover .profileDropContent{
+    display:flex;
+}
+
+.dropdown:hover, .dropElement:hover, .profileDropElement:hover{
+    background-color:#cacb8d;
+}
+
+
+/* Search */
+.searchContainer{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    height: 40px;
+    max-height: 40px;
+    background: #f1f1f1;
+    border: 1px solid grey;
+    border-radius: 0px 20px 20px 0px;
+    flex-grow: 1;
+}
+
+
+.searchBar {
+    padding-left: 10px;
+    font-size: 17px;
+    flex-grow: 3;
+    background: none;
+    border: none;
+}
+
+
+.searchButton {
+    background: none;
+    border: none;
+    border-radius: 0px 20px 20px 0px;
+    cursor: pointer;
+}
+
+.searchButton svg{
+    max-width: 40px;
+    max-height: 25px;
+    padding: 5px 5px 5px 5px;
+}
+
+.searchButton:hover {
+    background-color: #cacb8d;
+}
+
+.searchResult {
+    position:absolute;
+    top: 100%;
+    width: 100%;
+    max-height: 450px;
+    background-color: #f1f1f1;
+    border-radius: 0 25px 25px 25px;
+    z-index: 2;
+}
+
+.searchResult .quizLink{
+    background:none;
+    border: none;
+    margin: 10px;
+}
+
+.searchResult .quizLink:hover{
+    cursor: pointer;
+    background-color: #b9c19a;
+}
+
+.searchResult p{
+    margin-left: 10px;
+    font-style: italic;
+}
+
+.toggleSearch {
+    display: none;
+}
+
+
+
+/* Profile & LogOut */
+.profileDropdown button{
+    background: none;
+    cursor: pointer;
+    border: none;
+    margin-right: 30px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.profileDropContent{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: #b9c19a;
+    width: fit-content;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.profileDropContent a{
+    padding: 5px;
+    color: black;    
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+
+@media screen and (max-width:720px){
+   
+   .navBar{
+    flex-direction: column;
+   }
+    .searchContainer{
+    display:none;
+   }
+   
+    .searchContent{
+        flex-basis: 0;
+    }
+
+    .navbar .logo {
+        width: 80px;
+    }
+
+    .profileDropdown{
+        display:flex;
+    }
+
+    .toggleSearch{
+        display: block;
+        border: none;
+        background: none;
+    }
+
+    .toggleSearch:hover{
+        cursor: pointer;
+    }
+
+    .navbar .dropdown{
+        border-radius: 25px;
+    }
+
+    .searchContainer.active{
+        display: flex;
+        z-index: 8;
+        position: absolute;
+        top: 100%;
+        border-radius: 20px;
+        width: 40%;
+        align-items: center;
+    }
+
+    .searchContainer .searchButton{
+        display:none;
+    }
+
+    #search{
+        width:inherit;
+    }
+
+}
+
+
+body{
+    background: url('img/background.png') no-repeat;
+    min-height: 100vh;
+    height: auto;
+    background-size: cover;
+}
+
+main {
+    margin: 120px 0 120px 0;
+ }
+
+ /*FOOTER SECTION*/
+ .footer{
+    width: 100%;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    justify-content: center;
+    max-width: none;
+    margin: 0 auto;
+    padding: 0 5%;
+    background: transparent;
+}
+
+.footer .box-container .box{
+    text-align: center;
+    background: transparent;
+}
+
+.footer .box-container .box h3{
+    padding: .5rem 0;
+    font-size: 1.5rem;
+    color: #252525;
+    text-align: center;
+    font-family: "Albert Sans", sans-serif;
+    gap: 2rem;
+}
+
+.footer .box-container .box a{
+    display: block;
+    padding: .5rem 0;
+    font-size: 1.12rem;
+    color: #929572;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Lato", sans-serif;
+    gap: 2rem;
+}
+
+.footer .box-container .box li{
+    margin-bottom: 16px;
+    display: block;
+    transition: all .40s ease;
+}
+
+.footer .box-container .box a:hover{
+    background: none;
+    text-decoration: underline;
+}
+
+.footer .box-container .box li:hover{
+    transform: translateY(-3px) translateX(-5px);
+    background: none;
+}
+
+.footer .credit{
+    text-align: center;
+    border-top: .1rem solid rgba(0,0,0,0.1);
+    font-size: 1rem;
+    color: #252525;
+    padding: .5rem;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.footer .box-container .box p{
+    display: block;
+    padding: .5rem 0;
+    font-size: 1.12rem;
+    color: #929572;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    line-height: 1.5;
+}
+

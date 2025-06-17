@@ -1,0 +1,140 @@
+
+main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.questionContainer{
+    background-color: #d2d4aa;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px;
+}
+
+.timer{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+    background-color: #b9c19a;
+    border-radius: 10px 10px 0 0;
+}
+
+
+.questionBlock {
+    position : relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    border-bottom: #b9c19a 6px solid;
+    box-sizing: border-box;
+}
+
+.questionBlock h3{
+    margin: 0px;
+}
+.questionPrompt{
+    margin-top: 10px;
+}
+
+.questionPrompt .questionMark{
+    color: #c60606;
+    display: block;
+    padding-top: 6px;
+}
+
+.answerOption ul{
+    list-style-type: none;
+    padding: 0px;
+}
+
+.answerOption ul li{
+    padding: 8px;
+    border-radius: 10px;
+    background-color:#b9c19a;
+    margin: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+
+.cboxBtn{
+    margin-top: 20px;
+    border-radius: 10px;
+    border:none;
+    background-color: #dbfcb1;
+    padding: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.cboxBtn:hover{
+    background-color: #cacb8d;
+    cursor:pointer;
+}
+
+.doneBtn{
+    background-color:#b9c19a;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    z-index: 1;
+}
+
+.doneBtn:hover{
+    cursor:pointer;
+    background-color: #82834d;
+}
+
+.correctHint{
+    display:flex;
+    align-items: flex-end;
+    color: #298c15;
+    font-style: italic;
+}
+
+.quizDetails{
+    z-index: 5;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: #f5f5dc;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;   
+    border-radius: 10px;
+    align-items: center;
+    font-size: larger;
+}
+
+.quizDetails ul{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quizDetails .complete{
+    display: flex;
+    justify-content: center;
+    color: #c60606;
+}
+
+.quizDetails #backBtn:hover{
+    cursor:pointer;
+}
+
+#backBtn{
+    border: none;
+    background-color: #e7e79b;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width:50%;
+}
